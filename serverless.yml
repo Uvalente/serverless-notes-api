@@ -9,6 +9,9 @@ plugins:
   - serverless-bundle # Package our functions with Webpack
   - serverless-offline
   - serverless-dotenv-plugin # Load .env as environment variables
+  
+resources:
+  - ${file(resources/api-gateway-errors.yml)}
 
 provider:
   name: aws
